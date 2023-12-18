@@ -31,13 +31,13 @@ resource "aws_eks_cluster" "cluster" {
   }
 }
 
-output "endpoint" {
-  value = aws_eks_cluster.cluster.endpoint
-}
+# output "endpoint" {
+#   value = aws_eks_cluster.cluster.endpoint
+# }
 
-output "kubeconfig-certificate-authority-data" {
-  value = aws_eks_cluster.cluster.certificate_authority[0].data
-}
+# output "kubeconfig-certificate-authority-data" {
+#   value = aws_eks_cluster.cluster.certificate_authority[0].data
+# }
 
 resource "aws_eks_node_group" "node_group" {
   cluster_name    = aws_eks_cluster.cluster.name
