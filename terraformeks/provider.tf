@@ -17,6 +17,6 @@ terraform {
     key            = "eks-cluster/terraform.tfstate"
     region         = "ap-south-1"
     encrypt        = true
-   # dynamodb_table = "RR-tf-lock-dynamo"
+    dynamodb_table = "RR-tf-lock-dynamo"
   }
 }
